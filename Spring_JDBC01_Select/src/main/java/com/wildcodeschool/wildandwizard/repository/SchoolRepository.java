@@ -61,7 +61,6 @@ public class SchoolRepository {
             resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                Long id = resultSet.getLong("id");
                 String name = resultSet.getString("name");
                 Long capacity = resultSet.getLong("capacity");
                 String country = resultSet.getString("country");
@@ -100,7 +99,6 @@ public class SchoolRepository {
                 Long id = resultSet.getLong("id");
                 String name = resultSet.getString("name");
                 Long capacity = resultSet.getLong("capacity");
-                String country = resultSet.getString("country");
                 schools.add(new School(id, name, capacity, country));
             }
             return schools;
